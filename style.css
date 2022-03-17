@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#page-ld{
+    width: 150px;
+    height: 150px;
+}
+#page-ld circle{
+     fill: none;
+     stroke-width: 10;
+     stroke-linecap: round;
+}
+#page-ld circle:nth-child(1){
+    stroke: #2baef04b;
+    stroke-dasharray: 50;
+    animation-delay: -.2s;
+}
+#page-ld circle:nth-child(2){
+    stroke: #0818a86e;
+    stroke-dasharray: 100;
+    animation-delay: -.4s;
+}
+#page-ld circle:nth-child(3){
+    stroke: #0818a89a;
+    stroke-dasharray: 180;
+    animation-delay: -.6s;
+}
+#page-ld circle:nth-child(4){
+    stroke: #0818a8;
+    stroke-dasharray: 350;
+    animation-delay: -.8s;
+    stroke-dashoffset: -100;
+}
+@keyframes loader{
+    50%{
+        transform: rotate(360deg);
+    }
+}
+#page-ld circle{
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: center center;
+}
